@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class ayush
+{
+	protected:
+	int i,n;
+	public:
+		void set(int i,int n)
+		{
+			this->i=i;
+			this->n=n;
+		}
+		friend int sum(ayush o);
+};
+    int sum(ayush o)
+    {
+    	int r=o.i+o.n;
+    	return r;
+    	//cout<<o.i<<o.n;
+	}
+int main()
+{
+	ayush o;
+	o.set(8,9);
+	cout<<sum(o);
+//	cout<<h;
+	return 0;
+}
